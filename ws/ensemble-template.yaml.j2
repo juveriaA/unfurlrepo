@@ -1,0 +1,16 @@
+apiVersion: unfurl/v1alpha1
+kind: Ensemble
+spec:
+  service_template:
+    topology_template:
+      node_templates:
+        test_remote:
+          type: tosca:Root
+          interfaces:
+            Standard:
+              configure:
+                implementation:
+                  primary: Cmd
+                  operation_host: staging.example.com
+                inputs:
+                  cmd: echo "Hello world"

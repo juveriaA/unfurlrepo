@@ -1,0 +1,6 @@
+- hosts: localhost
+  tasks:
+  -  name:
+     template:
+            dest: "/root/.unfurl_home/ensemble-template.yaml"
+            src: "ensemble-template.yaml.j2"
